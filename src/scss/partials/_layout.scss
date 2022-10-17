@@ -1,0 +1,57 @@
+body {
+    background-color: $almost-white;
+}
+
+.row > * {
+    width: 90%;
+}
+
+.desktop-flex-between {
+
+    .page-left {
+        width: 100%;
+    }
+
+    .page-right {
+
+        &.card {
+            width: 100%;
+            border-radius: 25px;
+            background-color: $green-main;
+            color: $almost-white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            align-self: baseline;
+    
+            .card-inline {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+
+    .desktop-flex-evenly {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .desktop-flex-between {
+        display: flex;
+        justify-content: space-between;
+
+        .page-left {
+            width: 65%;
+        }
+
+        .page-right {
+
+            &.card {
+                width: 30%;
+            }
+        }
+    }
+}
